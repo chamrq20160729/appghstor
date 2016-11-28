@@ -1,0 +1,55 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	font: 14px "microsoft yahei";
+}
+/*header*/
+.header{
+	height: 53px;
+	background: rgb(255,190,50);
+}
+.header a{
+	color: rgb(37,37,37);
+}
+.wrap{
+	width: 960px;
+	margin: 0 auto;
+}
+.logo{
+	float: left;
+	padding: 8px 0;
+}
+.nav{
+	float: left;
+	padding-left: 35px;
+}
+.nav li{
+	float: left;
+	padding: 17px 32px;
+}
+.searchAndStar li{
+	float: left;
+	padding: 17px 13px;
+}	
+.header li:hover{
+	background: rgb(255,206,122);
+}
+.searchAndStar{
+	float: right;
+}
+/*main*/
+.main{
+	width: 960px;
+	margin: 0 auto;
+}
+.bannerLeft{
+	float: left;
+}
+.bannerRight{
+	float: right;
+}
+.banner a{
+	display: block;
+}
