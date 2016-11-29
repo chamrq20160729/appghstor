@@ -5,6 +5,14 @@
 	text-decoration: none;
 	font: 14px "microsoft yahei";
 }
+body{
+	background: rgb(239,239,239);
+}
+.clearfix:after{
+	display: block;
+	content: "";
+	clear: both;
+}
 /*header*/
 .header{
 	height: 53px;
@@ -19,7 +27,7 @@
 }
 .logo{
 	float: left;
-	padding: 8px 0;
+	padding: 5px 0;
 }
 .nav{
 	float: left;
@@ -44,12 +52,228 @@
 	width: 960px;
 	margin: 0 auto;
 }
-.bannerLeft{
+.banner{
+	margin-top: 15px;
+}
+.bannerLeft,.banner3{
 	float: left;
 }
-.bannerRight{
+.bannerRight,.banner4{
 	float: right;
 }
 .banner a{
 	display: block;
+	position: relative;
+	color: rgb(255,255,255);
+}
+.banner a span{
+	position: absolute;
+	left: 0;
+	bottom: 25px;
+	padding-left: 15px;
+}
+.banner1 a span{
+	padding-left: 25px;
+	font-size: 18px;
+	color: rgb(240,240,240);
+}
+.banner2{
+	margin-bottom: 6px;
+}
+/*mainLeft*/
+.mainLeft{
+	float: left;
+	width: 714px;
+}
+.contentNav ul{
+	height: 40px;
+	margin: 15px 0;
+	background: rgb(255,255,255);
+	border-radius: 7px;
+}
+.contentNav li{
+	float: left;
+}
+.contentNav a{
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 25px;
+	color: rgb(37,37,37);
+}
+.contentNav a:hover{
+	position: relative;
+	background: rgb(255,190,50);
+	border-radius: 7px;
+}
+.contentNav a:hover:after{
+	position: absolute;
+	left: 50%;
+	bottom: -5px;
+	content: "";
+	transform:translate(-50%,0);
+	border-top: 5px solid rgb(255,190,50); 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+}
+.news>div{
+	height: 135px;
+	margin-bottom: 15px;
+	padding: 15px;
+	background: rgb(255,255,255);
+	border-radius: 7px;
+}
+.newsImg{
+	float: left;
+}
+.newsContent{
+	float: right;
+	width: 485px;
+	margin-left: 27px;
+}
+.newsContent h3 a{
+	color: rgb(37,37,37);
+	font: 18px;
+	font-weight: 700;
+}
+.newsContent span{
+	color: rgb(150,150,150);
+}
+.newsContent p{
+	color: rgb(79,79,79);
+}
+.newsContent li{
+	float: left;
+}
+.essay span{
+	height: 40px;
+	line-height: 40px;
+}
+.essay p a{
+	color: rgb(79,79,79);
+}
+.essay a:hover{
+	text-decoration: underline;
+}
+.bookmark{
+	float: left;
+}
+.reader{
+	float: right;
+}
+.bookmark,.reader{
+	margin: 20px 0 5px 0;
+}
+.bookmark a,.bookmark i,.bookmark span,.reader i,.reader span {
+	font-size: 13px;
+}
+.bookmark li{
+	margin-right: 10px;
+}
+.bookmark li:first-child{
+	margin: 0;
+}
+.bookmark li a{
+	color: rgb(150,150,150);
+	text-decoration: underline;
+}
+.bookmark li a:hover{
+	color: rgb(37,37,37);
+}
+.news .more{
+	height: 50px;
+	background: rgb(225,225,225);
+}
+.news .more p{
+	color: rgb(150,150,150);
+	line-height: 50px;
+	text-align: center;
+	font-family: "adobe 黑体 std";
+}
+.news .more:hover p{
+	color: rgb(37,37,37);
+	cursor: pointer;
+}
+/*mainRight*/
+.mainRight{
+	float: right;
+	width: 236px;
+	margin-top: 15px;
+}
+.hot{
+	overflow: hidden;
+	border-radius: 7px;
+	background: rgb(255,255,255);
+}
+.hotNav li{
+	float: left;
+	width: 118px;
+	height: 44px;
+	background: rgb(225,225,225);
+}
+.hotNav li:hover{
+	background: rgb(255,255,255);
+}
+.hotNav li a{
+	display: block;
+	color: rgb(37,37,37);
+	line-height: 44px;
+	text-align: center;
+}
+.hotEssay ul{
+	padding: 30px 20px 0 17px;
+}
+.hotEssay li{
+	margin-bottom: 25px;
+}
+.hotEssay li span{
+	color: rgb(37,37,37);
+	font-size: 13px;
+}
+.hotEssay li a div{
+	float: left;
+	height: 40px;
+	margin-right: 12px;
+}
+.hotEssay li a div span{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: rgb(225,225,225);
+	text-align: center;
+	line-height: 16px;
+	border: 1px solid transparent;
+	border-radius: 50%;
+}
+.hotEssay li a .top1 span{
+	background: rgb(255,63,32);
+}
+.hotEssay li a .top2 span{
+	background: rgb(255,144,70);
+}
+.hotEssay li a .top3 span{
+	background: rgb(255,201,70);
+}
+.hotEssay li a:hover>span{
+	text-decoration: underline;
+}
+.ad>div{
+	margin-top: 18px;
+}
+.serve{
+	float: right;
+	margin-top: 80px;
+}
+/*footer*/
+.footer{
+	background: rgb(60,60,60);
+}
+.footer a{
+	color: rgb(150,150,150);
+	font-size: 14px;
+}
+caption{
+	float: left;
+	color: #fff;
+	font-size: 16px;
 }
