@@ -28,7 +28,11 @@ body{
 }
 .logo{
 	float: left;
-	padding: 5px 0;
+	padding: 8px 0;
+}
+.logo a{
+	display: block;
+	height: 37px;
 }
 .nav{
 	float: left;
@@ -38,15 +42,118 @@ body{
 	float: left;
 	padding: 17px 32px;
 }
+.searchAndStar{
+	float: right;
+}
 .searchAndStar li{
+	position: relative;
 	float: left;
 	padding: 17px 13px;
 }	
 .header li:hover{
 	background: rgb(255,206,122);
 }
-.searchAndStar{
+
+.searchBox{
+	display: none;
+	position: absolute;
+	bottom: -38px;
+	left: 0;/*此处不加会导致盒子往右偏移*/
+	z-index: 2;
+}
+.searchAndStar li:first-child:hover .searchBox{
+	display: block;
+}
+.searchBox:before{
+	display: block;
+	position: absolute;
+	top: -5px;
+	left: 31px;
+	content: "";
+	border-bottom: 6px solid #fff;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	z-index: 3;
+}
+.searchBox form{
+	position: relative;
+	overflow: hidden;
+	width: 213px;
+	border: 1px solid rgb(204,204,204);
+	border-radius: 4px;
+}
+.searchBox form i{
+	position: absolute;
+	top: 11px;
+	right: 10px;
+	color: rgb(255,190,50);
+	-moz-user-select: none;
+}
+.searchBox .search{
+	float: left;
+	width: 180px;
+	height: 36px;
+	padding-left: 8px;
+	border: 0;
+}
+.searchBox .submit{
+	float: left;
+	width: 25px;
+	height: 36px;
+	border: 0;
+	background: #fff;
+	cursor: pointer;
+}
+.starBox{
+	display: none;
+	position: absolute;
+	bottom: -113px;
+	left: -120px;
+	width: 238px;
+	padding: 17px 0;
+	background: #fff;
+	border: 1px solid rgb(204,204,204);
+	border-radius: 6px;
+	z-index: 2;
+}
+.searchAndStar li:last-child:hover .starBox{
+	display: block;
+}
+.starBox:before{
+	display: block;
+	position: absolute;
+	top: -5px;
+	left: 150px;
+	content: "";
+	border-bottom: 6px solid #fff;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	z-index: 3;
+
+}
+.starBox div{
 	float: right;
+	margin-right: 15px;
+}
+.starBox img{
+	float: left;
+	padding: 5px 10PX 5px 15px;
+	border-right: 2px solid #000;
+}
+.starBox .sina{
+	margin: 5px 0;
+}
+
+.starBox p span{
+	font-size: 12px;
+}
+.fa-weixin{
+	color: rgb(101,200,27);
+}
+.fa-weibo{
+	color: rgb(242,82,39);
+}.fa-qq{
+	color: rgb(56,169,228);
 }
 /*main*/
 .main{
@@ -78,8 +185,11 @@ body{
 	font-size: 18px;
 	color: rgb(240,240,240);
 }
-.banner2{
+.banner2 img{
+	overflow: hidden;
 	margin-bottom: 6px;
+	border: 1px solid transparent;
+	border-radius: 0 0 6px 6px;
 }
 /*mainLeft*/
 .mainLeft{
@@ -102,12 +212,12 @@ body{
 	padding: 0 25px;
 	color: rgb(37,37,37);
 }
-.contentNav a:hover{
+.contentNav .cShow a{
 	position: relative;
 	background: rgb(255,190,50);
 	border-radius: 7px;
 }
-.contentNav a:hover:after{
+.contentNav .cShow a:after{
 	position: absolute;
 	left: 50%;
 	bottom: -5px;
@@ -117,7 +227,7 @@ body{
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
 }
-.news>div{
+#paper>div,#APP>div,#chan>div,#ASO>div{
 	height: 135px;
 	margin-bottom: 15px;
 	padding: 15px;
@@ -137,7 +247,7 @@ body{
 	font: 18px;
 	font-weight: 700;
 }
-.newsContent span{
+.newsContent span,.newsContent i{
 	color: rgb(150,150,150);
 }
 .newsContent p{
@@ -181,17 +291,21 @@ body{
 .bookmark li a:hover{
 	color: rgb(37,37,37);
 }
-.news .more{
+#paper .more{
+	padding: 0;
 	height: 50px;
-	background: rgb(225,225,225);
 }
-.news .more p{
+#paper .more input{
+	width: 100%;
 	color: rgb(150,150,150);
+	background: rgb(225,225,225);
+	border: 0;
+	border-radius: 7px;
 	line-height: 50px;
 	text-align: center;
 	font-family: "adobe 黑体 std";
 }
-.news .more:hover p{
+#paper .more:hover input{
 	color: rgb(37,37,37);
 	cursor: pointer;
 }
@@ -203,40 +317,41 @@ body{
 }
 .hot{
 	overflow: hidden;
+	height: 553px;
 	border-radius: 7px;
 	background: rgb(255,255,255);
 }
-.hotNav li{
+#hotTab li{
 	float: left;
 	width: 118px;
 	height: 44px;
 	background: rgb(225,225,225);
 }
-.hotNav li:hover{
+#hotTab .hShow{
 	background: rgb(255,255,255);
 }
-.hotNav li a{
+#hotTab li a{
 	display: block;
 	color: rgb(37,37,37);
 	line-height: 44px;
 	text-align: center;
 }
-.hotEssay ul{
+#hotEssay ul{
 	padding: 30px 20px 0 17px;
 }
-.hotEssay li{
-	margin-bottom: 25px;
+#hotEssay li{
+	margin-bottom: 20px;
 }
-.hotEssay li span{
+#hotEssay li span{
 	color: rgb(37,37,37);
 	font-size: 13px;
 }
-.hotEssay li a div{
+#hotEssay li a div{
 	float: left;
 	height: 40px;
 	margin-right: 12px;
 }
-.hotEssay li a div span{
+#hotEssay li a div span{
 	display: inline-block;
 	width: 16px;
 	height: 16px;
@@ -246,17 +361,34 @@ body{
 	border: 1px solid transparent;
 	border-radius: 50%;
 }
-.hotEssay li a .top1 span{
+#hotEssay li a .top1 span{
 	background: rgb(255,63,32);
 }
-.hotEssay li a .top2 span{
+#hotEssay li a .top2 span{
 	background: rgb(255,144,70);
 }
-.hotEssay li a .top3 span{
+#hotEssay li a .top3 span{
 	background: rgb(255,201,70);
 }
-.hotEssay li a:hover>span{
+#hotEssay li a:hover>span{
 	text-decoration: underline;
+}
+.hidden{
+	display: none;
+}
+#hotLab td a{
+	display: block;
+	padding: 6px 3px;
+	color: rgb(213,151,0);
+	background: rgb(255,242,212);
+	border: 1px solid rgb(255,242,212);
+	border-radius: 4px;
+}
+#hotLab td a:hover{
+	background: rgb(210,242,212);
+}
+.ad{
+	float: right;
 }
 .ad>div{
 	margin-top: 18px;
@@ -313,30 +445,30 @@ body{
 .follow h3{
 	margin-bottom: 13px;
 }
-form{
+.follow form{
 	position: relative;
 }
-input{
+.follow input{
 	width: 178px;
 	height: 25px;
 	padding-left: 32px;
 	border: 1px solid transparent;
 	border-radius: 4px;
 }
-form i{
+.follow form i{
 	position: absolute;
 	top: 7px;
 	left: 9px;
 	color: rgb(255,190,50);
 }
-.submit{
+.follow .submit{
 	width: 53px;
 	height: 27px;
 	margin-left: 8px;
 	padding: 0;
 	background: rgb(255,190,50);
 }
-.submit:hover{
+.follow .submit:hover{
 	background: rgb(200,190,75);
 }
 .wechat{
