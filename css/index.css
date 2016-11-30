@@ -462,15 +462,6 @@ body{
 	color: #fff;
 	font-size: 16px;
 }
-/*.frendsLink li{
-	float: left;
-	width: 112px;
-	margin-right: 23px;
-	padding: 9px 0;
-}
-.frendsLink li:nth-child(5){
-	margin-right: -45px;
-}*/
 .contact{
 	float: left;
 }
@@ -533,7 +524,7 @@ body{
 	line-height: 71px;
 	text-align: center;
 }
-/*弹窗样式*/
+/*弹窗&遮罩样式*/
 #mask{
 	position: absolute;
 	top: 0;
