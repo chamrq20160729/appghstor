@@ -1,8 +1,5 @@
-function $(id){
-	return typeof id == "string" ? document.getElementById(id) : id;
-}
 window.onload = function(){
-		//页面高度和宽度
+	//页面高度和宽度
 	var sHeight = document.documentElement.scrollHeight;
 	var sWidth = document.documentElement.scrollWidth;
 	//可视区域高度和宽度
@@ -29,39 +26,4 @@ window.onload = function(){
 		document.body.removeChild(oMask);
 		document.body.removeChild(oTipbox);
 	}
-	//Tab选项卡切换，此处JS获取元素尽量用ID选择器
-	var hTab = $(hotTab);
-	var hLi = hTab.getElementsByTagName("li");
-	var tCon1 = $(hotEssay);
-	var tCon2 = $(hotLab);
-	var tCon = [tCon1,tCon2];
-	var cNav = $(contentNav);
-	var cLi = cNav.getElementsByTagName("li");
-	var news1= $(paper);
-	var news2 = $(APP);
-	var news3 = $(chan);
-	var news4 = $(ASO);
-	var news = [news1,news2,news3,news4];//这里之前用ID名字命名时出现错误
-	for (var i = 0;i < hLi.length;i++){
-		hLi[i].index = i
-		hLi[i].onmouseover = function() {
-			for (var j = 0;j < hLi.length;j++){
-				hLi[j].className = "";
-				tCon[j].className = "hidden";
-			}
-			this.className = "hShow";
-			tCon[this.index].className = "";
-		}
-	}
-	for (var i = 0;i < cLi.length;i++){
-		cLi[i].index = i;
-		cLi[i].onmouseover = function() {
-			for (var j = 0;j < cLi.length;j++){
-				cLi[j].className = "";
-				news[j].className = "hidden";
-			}
-			this.className = "cShow";
-			news[this.index].className = "";
-		}
-	}	
 }
