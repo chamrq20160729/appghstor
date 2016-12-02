@@ -8,6 +8,7 @@ window.onload = function(){
 	//可视区域高度和宽度
 	var wHeight = document.documentElement.clientHeight;
 	var wWidth = document.documentElement.clientWidth;
+	//创建遮罩
 	var oMask = document.createElement("div");
 	oMask.id = "mask";
 	oMask.style.height = sHeight + "px";
